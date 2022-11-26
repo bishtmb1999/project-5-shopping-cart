@@ -1,0 +1,16 @@
+getFilter = Object.keys(queryData)
+    if (getFilter.length) {
+      for (let value of getFilter) {
+        if ([ size, title, priceGreaterThan, priceLessThan, priceSort].indexOf(value) == -1)
+          return res.status(400).send({ status: false, message: `You can't filter Using '${value}' ` })
+      }
+    
+    }
+
+updateFilter = Object.keys(queryData)
+    if (getFilter.length) {
+      for (let value of getFilter) {
+        if ([ size, title, priceGreaterThan, priceLessThan, priceSort].indexOf(value) == -1)
+          return res.status(400).send({ status: false, message: `You can't filter Using '${value}' ` })
+      }
+    }
